@@ -3,6 +3,7 @@
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
 #include "game.h"
+#include "game.c"
 
 int main(int argc, char* argv[])
 {
