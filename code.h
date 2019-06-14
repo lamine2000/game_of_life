@@ -1,0 +1,11 @@
+#ifndef GAME_H_INCLUDED
+#define GAME_H_INCL
+
+    #define TAILLE_SQUARE         20
+    #define NB_SQUARE_LARGEUR     50
+    #define NB_SQUARE_HAUTEUR     35
+    #define LARGEUR_FENETRE       NB_SQUARE_LARGEUR * TAILLE_SQUARE
+    #define HAUTEUR_FENETRE       NB_SQUARE_HAUTEUR * TAILLE_SQUARE
+    #define NB_SQUARE             NB_SQUARE_LARGEUR * NB_SQUARE_HAUTEUR
+
+#endif // GAME_H_INCLUDED
