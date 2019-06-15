@@ -1,1 +1,1 @@
-git
+GAME_OF_LIFE_SDL
