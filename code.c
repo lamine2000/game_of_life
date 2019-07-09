@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
 #include "game.h"
-#include "game.c"
 
 int main(int argc, char* argv[])
 {
@@ -51,6 +51,7 @@ int main(int argc, char* argv[])
     SDL_Flip(ecran);
 
    SDL_EnableKeyRepeat(100,100);
+   srand(time(NULL));
     while(continuer)
     {
         SDL_WaitEvent(&event);
@@ -86,7 +87,23 @@ int main(int argc, char* argv[])
                         }
                         break;
 
-                    case SDLK_SPACE: //mise a jour de la matrice des changements d'états de la génération suivante
+                    case SDLK_h: //remplissage ranndomisé de la matrice
+                        for(int i=0; i< NB_SQUARE_HAUTEUR; i++)
+                        {
+                            for (int j = 0; j < NB_SQUARE_LARGEUR; j++)
+                            {
+                                matriceColor[i][j] = (rand()%2) ? black:white;
+                                SDL_FillRect(square[i][j],NULL,matriceColor[i][j]);
+
+                                positionSquare.x = j * TAILLE_SQUARE;
+                                positionSquare.y = i * TAILLE_SQUARE;
+
+                                SDL_BlitSurface(square[i][j], NULL, ecran, &positionSquare);
+                            }
+                        }
+                        break;
+
+                    case SDLK_SPACE: //mise a jour de la matrice des couleurs suivant la matrice des changements d'etats
 
                         for (int i = 0; i < NB_SQUARE_HAUTEUR; i++)
                         {
