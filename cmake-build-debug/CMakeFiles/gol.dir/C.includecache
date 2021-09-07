@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lamine/CLionProjects/gol/game.h
+
+/home/lamine/CLionProjects/gol/main.c
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+SDL/SDL.h
+-
+stdbool.h
+-
+game.h
+/home/lamine/CLionProjects/gol/game.h
+
